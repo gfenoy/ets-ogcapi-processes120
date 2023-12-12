@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ogcapi-processes-1.0-${version}" verbose="0" configfailurepolicy="continue">
+  <parameter name="iut" value="" />
+  <parameter name="ics" value="" />
+
+  <listeners>
+    <listener class-name="org.opengis.cite.ogcapiprocesses120.TestRunListener" />
+    <listener class-name="org.opengis.cite.ogcapiprocesses120.SuiteFixtureListener" />
+    <listener class-name="org.opengis.cite.ogcapiprocesses120.TestFailureListener" />
+  </listeners>
+
+  <test name="Core">
+    <packages>
+      <package name="org.opengis.cite.ogcapiprocesses120.general" />
+      <package name="org.opengis.cite.ogcapiprocesses120.landingpage" />
+      <package name="org.opengis.cite.ogcapiprocesses120.conformance" />
+      <package name="org.opengis.cite.ogcapiprocesses120.processlist" />
+      <package name="org.opengis.cite.ogcapiprocesses120.process" />
+      <package name="org.opengis.cite.ogcapiprocesses120.jobs" />
+    </packages>
+    <classes>
+      <class name="org.opengis.cite.ogcapiprocesses120.SuitePreconditions" />
+    </classes>
+  </test>
+  
+  <test name="OGC Process Description">
+    <packages>
+      <package name="org.opengis.cite.ogcapiprocesses120.ogcprocessdescription" />
+    </packages>
+  </test>  
+  
+  <test name="Job List">
+    <packages>
+      <package name="org.opengis.cite.ogcapiprocesses120.joblist" />
+    </packages>
+  </test>   
+
+  <test name="Deploy, Replace, Undeploy">
+    <packages>
+      <package name="org.opengis.cite.ogcapiprocesses120.conformance" />
+      <package name="org.opengis.cite.ogcapiprocesses120.general" />
+      <package name="org.opengis.cite.ogcapiprocesses120.dru" />
+    </packages>
+    <classes>
+      <class name="org.opengis.cite.ogcapiprocesses120.SuitePreconditions" />
+    </classes>
+  </test>
+  
+  <test name="CWL">
+    <packages>
+      <package name="org.opengis.cite.ogcapiprocesses120.cwl" />
+    </packages>
+  </test>  
+  
+  <test name="OGC Application Package">
+    <packages>
+      <package name="org.opengis.cite.ogcapiprocesses120.ogcapppkg" />
+    </packages>
+  </test>   
+
+  <test name="Docker">
+    <packages>
+      <package name="org.opengis.cite.ogcapiprocesses120.docker" />
+    </packages>
+  </test>
+
+</suite>
